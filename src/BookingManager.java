@@ -22,7 +22,7 @@ public class BookingManager {
         rezervaceList.clear();
     }
 
-    public List<Rezervace> getPocetRezervaciSPracPobytem() {
+    public int getPocetRezervaciSPracPobytem() {
         int pocetPracRezervaci = 0;
         for (Rezervace rezervace : rezervaceList) {
             if (rezervace.isPracovniPobyt()) {
@@ -31,4 +31,5 @@ public class BookingManager {
         }
         return pocetPracRezervaci;
     }
+
 }
