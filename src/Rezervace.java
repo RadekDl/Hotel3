@@ -2,7 +2,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class Rezervace {
-    private List<Pokoj> pokoj;
+    private List<Pokoj> pokoj;// změna na bez listu
     private int pocetHostu;
     private LocalDate zacatekPobytu;
     private LocalDate konecPobytu;
