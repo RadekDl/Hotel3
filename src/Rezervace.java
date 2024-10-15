@@ -2,7 +2,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class Rezervace {
-    private List<Pokoj> pokoj;// změna na bez listu na Pokoj pokoj
+    private Pokoj pokoj;// změna na bez listu na Pokoj pokoj
     private int pocetHostu;
     private LocalDate zacatekPobytu;
     private LocalDate konecPobytu;
@@ -10,13 +10,14 @@ public class Rezervace {
     private List<Host> host;
     private String hlavniHost;
 
-    public Rezervace(List<Pokoj> pokoj, int pocetHostu, LocalDate zacatekPobytu, LocalDate konecPobytu, boolean isPracovniPobyt, String hlavniHost){
+    public Rezervace(Pokoj pokoj, int pocetHostu, LocalDate zacatekPobytu, LocalDate konecPobytu, boolean isPracovniPobyt, String hlavniHost){
         this.pokoj  = pokoj;
         this.pocetHostu = pocetHostu;
         this.zacatekPobytu = zacatekPobytu;
         this.konecPobytu = konecPobytu;
         this.isPracovniPobyt = isPracovniPobyt;
         this.host = host;
+        this.hlavniHost = hlavniHost;
     }
 
     public String getHlavniHost() {
@@ -27,10 +28,10 @@ public class Rezervace {
         this.hlavniHost = hlavniHost;
     }
 
-    public List<Pokoj> getPokoj(){
+    public Pokoj getPokoj(){
         return pokoj;
     }
-    public void setPokoj(List<Pokoj> pokoj){
+    public void setPokoj(Pokoj pokoj){
         this.pokoj = pokoj;
     }
     public int getPocetHostu(){

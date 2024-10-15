@@ -24,15 +24,18 @@ public class Main {
         seznamPokoju.add(pokoj2);
         seznamPokoju.add(pokoj3);
 
-        Rezervace rezervace1 = new Rezervace(seznamPokoju,1,LocalDate.of(2021,7,19),LocalDate.of(2021,7,26),true,host1.getPrijmeni());
-        Rezervace rezervace2 = new Rezervace(seznamPokoju,3,LocalDate.of(2021,9,1),LocalDate.of(2021,9,14),false,host2.getPrijmeni());
+        Rezervace rezervace1 = new Rezervace(pokoj1,1,LocalDate.of(2021,7,19),LocalDate.of(2021,7,26),true,host1.getPrijmeni());
+        Rezervace rezervace2 = new Rezervace(pokoj3,2,LocalDate.of(2021,9,1),LocalDate.of(2021,9,14),false,host2.getPrijmeni());
 
         List<Rezervace> seznamRezervaci =  new ArrayList<>();
         seznamRezervaci.add(rezervace1);
         seznamRezervaci.add(rezervace2);
 
         for (Rezervace tiskRezervaci : seznamRezervaci){
-            System.out.println("Rezervace pokoje číslo "+ tiskRezervaci.getPokoj().getFirst().getCisloPokoje()+ " počet hostů "+ tiskRezervaci.getPocetHostu()+seznamHostu.getFirst().getPrijmeni());
+            int inedxPocetHostu;
+            inedxPocetHostu = tiskRezervaci.getPocetHostu() - 1;
+            System.out.println("Rezervace pokoje číslo "+ tiskRezervaci.getPokoj().getCisloPokoje()+ " počet hostů "+ tiskRezervaci.getPocetHostu()+" "+seznamHostu.getFirst().getPrijmeni()
+            +" + "+ inedxPocetHostu+" další host/é.");
 
         }
     }
