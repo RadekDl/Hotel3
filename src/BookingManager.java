@@ -37,7 +37,7 @@ public class BookingManager {
         for (Rezervace rezervace : rezervaceList) {
             if (rezervace.getPocetHostu() > 0) {
 
-                soucetHostu = +soucetHostu;
+                soucetHostu =+soucetHostu;
             }
 
         }
