@@ -32,4 +32,16 @@ public class BookingManager {
         return pocetPracRezervaci;
     }
 
+    public int getPocetVsechHostu() {
+        int soucetHostu = 0;
+        for (Rezervace rezervace : rezervaceList) {
+            if (rezervace.getPocetHostu() > 0) {
+
+                soucetHostu = +soucetHostu;
+            }
+
+        }
+        return soucetHostu;
+    }
+
 }

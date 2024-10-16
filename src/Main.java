@@ -6,6 +6,10 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
+        BookingManager manager = new BookingManager();
+        testovani(manager);
+
+
         Host host1 = new Host("Adéla","Malíková", LocalDate.of(1993,3,13));
         Host host2 = new Host("Jan","Dvořáček",LocalDate.of(1995,5,5));
 
@@ -19,6 +23,9 @@ public class Main {
 
         listPokuju(pokoj1, pokoj2, pokoj3);
 
+        manager.addRezervace(new Rezervace(pokoj1,1,LocalDate.of(2024,12,1),LocalDate.of(2024,12,12),true,host1.getPrijmeni()));
+        manager.addRezervace(new Rezervace(pokoj3,2,LocalDate.of(2024,10,15),LocalDate.of(2024,10,30),false,host2.getPrijmeni()));
+
         Rezervace rezervace1 = new Rezervace(pokoj1,1,LocalDate.of(2021,7,19),LocalDate.of(2021,7,26),true,host1.getPrijmeni());
         Rezervace rezervace2 = new Rezervace(pokoj3,2,LocalDate.of(2021,9,1),LocalDate.of(2021,9,14),false,host2.getPrijmeni());
 
@@ -31,7 +38,17 @@ public class Main {
             +" + "+ inedxPocetHostu+" další host/é.");
 
         }
+
+        System.out.println();
+
     }
+
+    private static void testovani(BookingManager manager){
+        System.out.println("Počet prec pobytů "+manager.getPocetRezervaciSPracPobytem());
+        System.out.println("\npočet všech hostů "+manager.getPocetVsechHostu());
+
+    }
+
 
     private static List<Host> listHostu(Host host1, Host host2) {
         List<Host> seznamHostu = new ArrayList<>();
