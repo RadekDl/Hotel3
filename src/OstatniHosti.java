@@ -1,21 +1,21 @@
 import java.time.LocalDate;
 
-public class ostatniHosti {
+public class OstatniHosti {
 
     private String jmeno;
     private String prijmeni;
     private LocalDate datumNarozeni;
 
 
-    public ostatniHosti(String jmeno, String prijmeni, LocalDate datumNarozeni){
+    public OstatniHosti(String jmeno, String prijmeni, LocalDate datumNarozeni){
         this.jmeno = jmeno;
         this.prijmeni = prijmeni;
         this.datumNarozeni = datumNarozeni;
     }
-    public ostatniHosti(String jmeno, String prijmeni){
+    public OstatniHosti(String jmeno, String prijmeni){
         this.jmeno = jmeno;
         this.prijmeni = prijmeni;
-        this.datumNarozeni = datumNarozeni;
+        this.datumNarozeni = null;
     }
 
     public String getJmeno(){

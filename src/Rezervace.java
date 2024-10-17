@@ -7,10 +7,10 @@ public class Rezervace {
     private LocalDate zacatekPobytu;
     private LocalDate konecPobytu;
     private boolean isPracovniPobyt;
-    private List<ostatniHosti> ostatniHosti;
+    private List<OstatniHosti> ostatniHosti;
     private String hlavniHost;
 
-    public Rezervace(Pokoj pokoj, int pocetHostu, LocalDate zacatekPobytu, LocalDate konecPobytu, boolean isPracovniPobyt, String hlavniHost){
+    public Rezervace(Pokoj pokoj, int pocetHostu, LocalDate zacatekPobytu, LocalDate konecPobytu, boolean isPracovniPobyt, List ostatniHosti){
         this.pokoj  = pokoj;
         this.pocetHostu = pocetHostu;
         this.zacatekPobytu = zacatekPobytu;
@@ -19,7 +19,7 @@ public class Rezervace {
         this.ostatniHosti = ostatniHosti;
         this.hlavniHost = hlavniHost;
     }
-    public Rezervace(Pokoj pokoj,LocalDate zacatekPobytu, LocalDate konecPobytu,  String hlavniHost) {
+    public Rezervace(Pokoj pokoj,LocalDate zacatekPobytu, LocalDate konecPobytu,  List ostatniHosti) {
         this.pokoj = pokoj;
         this.pocetHostu = pocetHostu;
         this.zacatekPobytu = zacatekPobytu;
@@ -68,11 +68,11 @@ public class Rezervace {
         isPracovniPobyt = PracovniPobyt;
     }
 
-    public List<ostatniHosti> getHost() {
+    public List<OstatniHosti> getHost() {
         return ostatniHosti;
     }
 
-    public void setHost(List<ostatniHosti> ostatniHosti) {
+    public void setHost(List<OstatniHosti> ostatniHosti) {
         this.ostatniHosti = ostatniHosti;
     }
 }
