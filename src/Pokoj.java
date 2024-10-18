@@ -15,18 +15,19 @@ public class Pokoj {
         this.cenaNoc = cenaNoc;
     }
 
-
-
-    public int getCisloPokoje(){
+    public int getCisloPokoje() {
         return cisloPokoje;
     }
-    public void setCisloPokoje(int cisloPokoje){
+
+    public void setCisloPokoje(int cisloPokoje) {
         this.cisloPokoje = cisloPokoje;
     }
-    public int getPocetLuzek(){
+
+    public int getPocetLuzek() {
         return pocetLuzek;
     }
-    public void setPocetLuzek(int pocetLuzek){
+
+    public void setPocetLuzek(int pocetLuzek) {
         this.pocetLuzek = pocetLuzek;
     }
 
@@ -34,20 +35,23 @@ public class Pokoj {
         return isBalkon;
     }
 
-    public void setBalkon(boolean isBalkon) {
-        this.isBalkon = isBalkon;
+    public void setBalkon(boolean balkon) {
+        isBalkon = balkon;
     }
 
-    public boolean getIsVyhled() {
+    public boolean isVyhled() {
         return isVyhled;
     }
-    public void setIsVyhled(boolean isVyhled){
-        this.isVyhled = isVyhled;
+
+    public void setVyhled(boolean vyhled) {
+        isVyhled = vyhled;
     }
-    public BigDecimal getCenaNoc(){
+
+    public BigDecimal getCenaNoc() {
         return cenaNoc;
     }
-    public void setCenaNoc(BigDecimal cenaNoc){
+
+    public void setCenaNoc(BigDecimal cenaNoc) {
         this.cenaNoc = cenaNoc;
     }
 }
