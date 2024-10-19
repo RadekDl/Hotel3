@@ -20,7 +20,8 @@ public class Rezervace {
         this.dalsiHosti = dalsiHosti;
         this.hlavniHost = hlavniHost;
     }
-    public Rezervace(Pokoj pokoj,int pocetHostu,LocalDate zacatekPobytu,LocalDate konecPobytu, boolean isPracovnipobyt, Host hlavniHost) {
+    public Rezervace(Pokoj pokoj,int pocetHostu,LocalDate zacatekPobytu,LocalDate konecPobytu,
+                     boolean isPracovnipobyt, Host hlavniHost) {
         this(pokoj,pocetHostu,zacatekPobytu,konecPobytu,isPracovnipobyt,hlavniHost,List.of());
 
     }
