@@ -24,8 +24,10 @@ public class BookingManager {
             if (rezervace.isPracovniPobyt()){
                 pocet++;
             }
+
         }
         return pocet;
 
     }
+
 }

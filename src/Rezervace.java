@@ -7,20 +7,21 @@ public class Rezervace {
     private LocalDate zacatekPobytu;
     private LocalDate konecPobytu;
     private boolean isPracovniPobyt;
-    private List<OstatniHosti> ostatniHosti;
-    private String hlavniHost;
+    private List<Host> dalsiHosti;
+    private Host hlavniHost;
 
-    public Rezervace(Pokoj pokoj, int pocetHostu, LocalDate zacatekPobytu, LocalDate konecPobytu, boolean isPracovniPobyt, String hlavniHost){
+    public Rezervace(Pokoj pokoj, int pocetHostu, LocalDate zacatekPobytu, LocalDate konecPobytu,
+                     boolean isPracovniPobyt, Host hlavniHost,List<Host> dalsiHosti){
         this.pokoj  = pokoj;
         this.pocetHostu = pocetHostu;
         this.zacatekPobytu = zacatekPobytu;
         this.konecPobytu = konecPobytu;
         this.isPracovniPobyt = isPracovniPobyt;
-        this.ostatniHosti = ostatniHosti;
+        this.dalsiHosti = dalsiHosti;
         this.hlavniHost = hlavniHost;
     }
-    public Rezervace(Pokoj pokoj,int pocetHostu,LocalDate zacatekPobytu,LocalDate konecPobytu, String hlavniHost) {
-        this(pokoj,pocetHostu,zacatekPobytu,konecPobytu,false,hlavniHost);
+    public Rezervace(Pokoj pokoj,int pocetHostu,LocalDate zacatekPobytu,LocalDate konecPobytu, boolean isPracovnipobyt, Host hlavniHost) {
+        this(pokoj,pocetHostu,zacatekPobytu,konecPobytu,isPracovnipobyt,hlavniHost,List.of());
 
     }
 
@@ -64,19 +65,19 @@ public class Rezervace {
         isPracovniPobyt = pracovniPobyt;
     }
 
-    public List<OstatniHosti> getOstatniHosti() {
-        return ostatniHosti;
+    public List<Host> getDalsiHosti() {
+        return dalsiHosti;
     }
 
-    public void setOstatniHosti(List<OstatniHosti> ostatniHosti) {
-        this.ostatniHosti = ostatniHosti;
+    public void setDalsiHosti(List<Host> dalsiHosti) {
+        this.dalsiHosti = dalsiHosti;
     }
 
-    public String getHlavniHost() {
+    public Host getHlavniHost() {
         return hlavniHost;
     }
 
-    public void setHlavniHost(String hlavniHost) {
+    public void setHlavniHost(Host hlavniHost) {
         this.hlavniHost = hlavniHost;
     }
 }
