@@ -14,9 +14,9 @@ public class Pokoj {
         this.isVyhled = isVyhled;
         this.cenaNoc = cenaNoc;
     }
-   // public Pokoj(int cisloPokoje,BigDecimal cenaNoc){
-   //     this(cisloPokoje,pocetLuzek,isBalkon,isVyhled,cenaNoc);
-   // }
+  /* public Pokoj(int cisloPokoje,int pocetLuzek,BigDecimal cenaNoc){
+      this(cisloPokoje,pocetLuzek,true,true,cenaNoc);
+    }*/
 
     public int getCisloPokoje() {
         return cisloPokoje;
