@@ -46,7 +46,8 @@ public class Main {
                     +" je to pracovní pobyt? "+rezervaces.get(i).isPracovniPobyt());
         }
 
-       int pocet = bookingManager.getPocetPracRezervaci();
+        int pocet;
+        pocet = bookingManager.getPocetPracRezervaci();
             System.out.println("\npracovních pobytů je " + pocet);
 
 
