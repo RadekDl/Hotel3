@@ -47,7 +47,8 @@ public class Main {
         }
 
        int pocet = bookingManager.getPocetPracRezervaci();
-        System.out.println("\npracovních pobytů je "+ pocet);
+            System.out.println("\npracovních pobytů je " + pocet);
+
 
 
 

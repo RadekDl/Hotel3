@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookingManager {
-    private  List<Rezervace> rezervaces = new ArrayList<>();
+    private final List<Rezervace> rezervaces = new ArrayList<>();
 
 
     public void addRezervace(Rezervace rezervace) {     //přidání nové rezervace do seznamu
