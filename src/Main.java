@@ -12,9 +12,9 @@ public class Main {
         Host host3 = new Host("Karolína","Tmavá");
 
         List<Host> ostatniHoste = new ArrayList<>();
+
         ostatniHoste.add(host1);
-        ostatniHoste.add(host2);
-        ostatniHoste.add(host3);
+
 
         //Pokoje
         Pokoj pokoj1 = new Pokoj(1,1,true,true,new BigDecimal("1000"));
@@ -22,37 +22,46 @@ public class Main {
         Pokoj pokoj3 = new Pokoj(3,3,false,true,new BigDecimal("2400"));
 
         BookingManager bookingManager = new BookingManager();
-        List<Rezervace> rezervaces = new ArrayList<>();
-        rezervaces.add(new Rezervace(pokoj3,1,LocalDate.of(2023,6,1),
+        bookingManager.addRezervace(new Rezervace(pokoj3,1,LocalDate.of(2023,6,1),
                 LocalDate.of(2023,6,7),true,host1));
-        rezervaces.add(new Rezervace(pokoj2,1,LocalDate.of(2023,7,18),
+        bookingManager.addRezervace(new Rezervace(pokoj2,1,LocalDate.of(2023,7,18),
                 LocalDate.of(2023,7,21),false,host2));
-        rezervaces.add(new Rezervace(pokoj3,2,LocalDate.of(2023,8,1),
-               LocalDate.of(2023,8,31),true,host3,List.of(host1)));
+        bookingManager.addRezervace(new Rezervace(pokoj3,2,LocalDate.of(2023,8,1),
+                LocalDate.of(2023,8,31),true,host3,List.of(host1)));
+
+
+//        List<Rezervace> rezervaces = new ArrayList<>();
+//        rezervaces.add(new Rezervace(pokoj3,1,LocalDate.of(2023,6,1),
+//                LocalDate.of(2023,6,7),true,host1));
+//        rezervaces.add(new Rezervace(pokoj2,1,LocalDate.of(2023,7,18),
+//                LocalDate.of(2023,7,21),false,host2));
+//        rezervaces.add(new Rezervace(pokoj3,2,LocalDate.of(2023,8,1),
+//               LocalDate.of(2023,8,31),true,host3,List.of(host1)));
 
         // nových 10 rezervací pomocí cyklu
         for(int i =0; i<20; i = i+2) {
-            rezervaces.add(new Rezervace(pokoj2, 1, LocalDate.of(2023, 8, 1 + i),
-                    LocalDate.of(2023, 8, 2 + i), true, host3));
+
+                bookingManager.addRezervace(new Rezervace(pokoj2, 1, LocalDate.of(2023, 8, 1 + i),
+                        LocalDate.of(2023, 8, 2 + i), true, host3));
 
         }
 //        Výpis rezervací
-        for(int i =0; i< rezervaces.size(); i++){
 
-            System.out.println(rezervaces.get(i).getHlavniHost().getPrijmeni()
-                    +" "+rezervaces.get(i).getHlavniHost().getDatumNarozeni()
-                    +" "+rezervaces.get(i).getZacatekPobytu()
-                    +" "+rezervaces.get(i).getKonecPobytu()
-                    +" je to pracovní pobyt? "+rezervaces.get(i).isPracovniPobyt());
+        for(int i =0; i< bookingManager.getRezervaces().size(); i++){
+
+            System.out.println(bookingManager.getRezervace(i).getHlavniHost().getPrijmeni()
+                    +" "+bookingManager.getRezervace(i).getHlavniHost().getDatumNarozeni()
+                    +" "+bookingManager.getRezervace(i).getZacatekPobytu()
+                    +" "+bookingManager.getRezervace(i).getKonecPobytu()
+                    +" je to pracovní pobyt? "+bookingManager.getRezervace(i).isPracovniPobyt());
         }
 
-        int pocet;
-        pocet = bookingManager.getPocetPracRezervaci();
-            System.out.println("\npracovních pobytů je " + pocet);
 
 
+        bookingManager.IsPracovniPobyt();
 
 
+        }
 
 
 
@@ -90,7 +99,8 @@ public class Main {
 
     }
 
-}
+
+
 
 
 
