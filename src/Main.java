@@ -30,22 +30,17 @@ public class Main {
                 LocalDate.of(2023,8,31),true,host3,List.of(host1)));
 
 
-//        List<Rezervace> rezervaces = new ArrayList<>();
-//        rezervaces.add(new Rezervace(pokoj3,1,LocalDate.of(2023,6,1),
-//                LocalDate.of(2023,6,7),true,host1));
-//        rezervaces.add(new Rezervace(pokoj2,1,LocalDate.of(2023,7,18),
-//                LocalDate.of(2023,7,21),false,host2));
-//        rezervaces.add(new Rezervace(pokoj3,2,LocalDate.of(2023,8,1),
-//               LocalDate.of(2023,8,31),true,host3,List.of(host1)));
+
 
         // nových 10 rezervací pomocí cyklu
+
         for(int i =0; i<20; i = i+2) {
 
                 bookingManager.addRezervace(new Rezervace(pokoj2, 1, LocalDate.of(2023, 8, 1 + i),
                         LocalDate.of(2023, 8, 2 + i), true, host3));
 
         }
-//        Výpis rezervací
+        //výpis rezervací
 
         for(int i =0; i< bookingManager.getRezervaces().size(); i++){
 
@@ -65,37 +60,7 @@ public class Main {
 
 
 
-        //Rezervace bez BokingManagera
-//        Rezervace rezervace1 = new Rezervace(pokoj3,1,LocalDate.of(2023,6,1),
-//                LocalDate.of(2023,6,7),true,host1);
-//        Rezervace rezervace2 = new Rezervace(pokoj2,1,LocalDate.of(2023,7,18),
-//                LocalDate.of(2023,7,21),false,host2);
-//        Rezervace rezervace3 = new Rezervace(pokoj3,2,LocalDate.of(2023,8,1),
-//                LocalDate.of(2023,8,31),true,host3,List.of(host1));
-//
-//        List<Rezervace> listRezervaci =new ArrayList<>();
-//        listRezervaci.add(rezervace1);
-//        listRezervaci.add(rezervace2);
-//        listRezervaci.add(rezervace3);
 
-
-//         for pro nové rezervace
-//
-//        for(int i =0; i<20; i = i+2){
-//            listRezervaci.add(new Rezervace(pokoj2,1,LocalDate.of(2023,8,1+i),
-//                LocalDate.of(2023,8,2+i),true,host3));
-//
-//
-//    }
-
-//        for(int i =0; i< listRezervaci.size(); i++){
-//
-//            System.out.println(listRezervaci.get(i).getHlavniHost().getPrijmeni()
-//                    +" "+listRezervaci.get(i).getHlavniHost().getDatumNarozeni()
-//                    +" "+listRezervaci.get(i).getZacatekPobytu()
-//                    +" "+listRezervaci.get(i).getKonecPobytu()
-//                    +" je to pracovní pobyt? "+listRezervaci.get(i).isPracovniPobyt());
-//        }
 
     }
 
