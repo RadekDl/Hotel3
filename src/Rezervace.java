@@ -38,9 +38,7 @@ public class Rezervace {
         return pocetHostu;
     }
 
-    public void setPocetHostu(int pocetHostu) {
-        this.pocetHostu = pocetHostu;
-    }
+
 
     public LocalDate getZacatekPobytu() {
         return zacatekPobytu;

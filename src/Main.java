@@ -50,11 +50,14 @@ public class Main {
                     +" "+bookingManager.getRezervace(i).getKonecPobytu()
                     +" je to pracovní pobyt? "+bookingManager.getRezervace(i).isPracovniPobyt());
         }
+        //Výpisy
+        System.out.println("počet prac pobytů je " + bookingManager.isPracovniPobyt());
 
 
-
-        bookingManager.IsPracovniPobyt();
-
+        System.out.println("rezervace dle idexu -  pokoj číslo " + bookingManager.getRezervace(0).getPokoj().getCisloPokoje());
+        System.out.println( "celkový počet hostů je: "+ bookingManager.getPocetHostu());
+        System.out.println("průměrný počet hostů na rezervaci je "+ "počet hostů "+bookingManager.getPocetHostu()+" / "
+        +"počet rezervací "+ bookingManager.getRezervaces().size()+" = "+ bookingManager.getPrumPocetHostu());
 
         }
 

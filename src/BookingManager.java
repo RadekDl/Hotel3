@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookingManager {
-    private  List<Rezervace> rezervaces= new ArrayList<>();
+    private List<Rezervace> rezervaces = new ArrayList<>();
 
 
     public void addRezervace(Rezervace rezervace) {     //přidání nové rezervace do seznamu
@@ -22,16 +22,31 @@ public class BookingManager {
         rezervaces.clear();
     }
 
-    public int IsPracovniPobyt() {
+    public int isPracovniPobyt() {
         int pocet = 0;
-        for (Rezervace rezervace : rezervaces){
-            if (rezervace.isPracovniPobyt()){
+        for (Rezervace rezervace : rezervaces) {
+            if (rezervace.isPracovniPobyt()) {
                 pocet++;
-           }
+            }
         }
-        System.out.println("počet prac pobytů je "+ pocet);
-       return  pocet;
+
+        return pocet;
     }
 
+    public int getPocetHostu() {
+        int celkovyPocetHostu = 0;
+        for (int i = 0; i <rezervaces.size();i++) {
+           celkovyPocetHostu = getRezervace(i).getPocetHostu() + celkovyPocetHostu;
+
+
+        }
+        return celkovyPocetHostu;
+    }
+
+    public double getPrumPocetHostu(){
+        double i;
+        i=getPocetHostu() / rezervaces.size();
+        return i;
+    }
 
 }
